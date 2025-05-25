@@ -1,47 +1,8 @@
-
-import Header from "@/components/Header";
 import WaitlistForm from "@/components/WaitlistForm";
-import FeatureCard from "@/components/FeatureCard";
-import Footer from "@/components/Footer";
-import { Zap, Shield, Rocket, Code, Globe, Users } from "lucide-react";
 
 const Index = () => {
-  const features = [
-    {
-      icon: Zap,
-      title: "Deploy Instantâneo",
-      description: "Publique suas aplicações em segundos, sem configurações complexas ou conhecimento técnico."
-    },
-    {
-      icon: Shield,
-      title: "Segurança Garantida",
-      description: "SSL automático, proteção DDoS e monitoramento 24/7 para manter suas aplicações sempre seguras."
-    },
-    {
-      icon: Rocket,
-      title: "Performance Otimizada",
-      description: "CDN global e otimizações automáticas para garantir velocidade máxima em qualquer lugar do mundo."
-    },
-    {
-      icon: Code,
-      title: "Sem Código Necessário",
-      description: "Interface intuitiva que permite deploy de aplicações sem conhecimento em programação."
-    },
-    {
-      icon: Globe,
-      title: "Domínio Personalizado",
-      description: "Configure seu próprio domínio com apenas alguns cliques e tenha presença profissional na web."
-    },
-    {
-      icon: Users,
-      title: "Colaboração em Equipe",
-      description: "Gerencie projetos em equipe com permissões granulares e histórico completo de deployments."
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
-      <Header />
       
       {/* Hero Section */}
       <section className="relative overflow-hidden">
@@ -119,26 +80,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-24 bg-white/50 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Tudo que você precisa para deployar
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Uma plataforma completa que elimina a complexidade do deploy e hospedagem de aplicações
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <FeatureCard key={index} {...feature} />
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -154,14 +95,13 @@ const Index = () => {
           </div>
           
           <div className="mt-8 flex flex-wrap justify-center items-center gap-6 text-sm text-blue-100">
-            <span>🚀 Lançamento previsto: Q2 2024</span>
+            {/* <span>🚀 Lançamento previsto: Q2 2024</span> */}
             <span>👥 500+ desenvolvedores já cadastrados</span>
             <span>⚡ Early bird: 50% OFF</span>
           </div>
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 };
